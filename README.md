@@ -8,6 +8,8 @@ This project is a small AI scheduling backend that chats with a user, checks int
 
 ## ⚡ Quick start (the 60-second version)
 
+### Backend
+
 1. **Install deps:**
 ```bash
 pip install -r requirements.txt
@@ -32,6 +34,37 @@ uvicorn server:app --reload --host 0.0.0.0 --port 8000
 
 4. **Open:**
 http://localhost:8000/docs
+
+### Frontend (Next.js)
+
+1. **Install deps:**
+```bash
+npm install
+# or
+yarn install
+
+```
+
+
+2. **Add .env.local:**
+Create a file named `.env.local` in the frontend directory and add your Google credentials:
+```env
+GOOGLE_CLIENT_ID="588954218867-t.......g.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET="GOCSPX-P......i"
+GOOGLE_REDIRECT_URI="http://localhost:3000/api/auth/callback"
+
+```
+
+
+3. **Run:**
+```bash
+npm run dev
+
+```
+
+
+4. **Open:**
+https://www.google.com/search?q=http://localhost:3000
 
 ---
 
@@ -60,7 +93,7 @@ http://localhost:8000/docs
 
 ---
 
-## 🛠️ Prerequisites & Setup
+## 🛠️ Prerequisites & Setup (Backend)
 
 ### Prerequisites
 
@@ -115,6 +148,43 @@ python server.py
 http://localhost:8000/docs
 
 > **Heads-up:** Don’t try to open `http://0.0.0.0:8000` in the browser. `0.0.0.0` is a bind address (listen on all interfaces), not a destination. Use `localhost` or `127.0.0.1`.
+
+---
+
+## 💻 Frontend Setup (Next.js)
+
+To run the user interface, you need to set up the Next.js client.
+
+### 1. Installation
+
+Navigate to the frontend directory and install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+
+```
+
+### 2. Configure Environment Variables
+
+Create a `.env.local` file in the root of your frontend directory. You need to add your Google OAuth credentials here so the frontend can authenticate users.
+
+```env
+GOOGLE_CLIENT_ID="588954218867-t.......g.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET="GOCSPX-P......i"
+GOOGLE_REDIRECT_URI="http://localhost:3000/api/auth/callback"
+
+```
+
+### 3. Run the Development Server
+
+```bash
+npm run dev
+
+```
+
+Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) with your browser to see the result.
 
 ---
 
