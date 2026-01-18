@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+requests
+langchain-huggingface
+langchain-core
+langgraph
+pydantic
+huggingface_hub
+tzdata
